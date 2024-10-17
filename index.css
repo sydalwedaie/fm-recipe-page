@@ -1,0 +1,78 @@
+/* Resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --color-Stone-100: hsl(30, 54%, 90%);
+  --color-Stone-150: hsl(30, 18%, 87%);
+  --color-Stone-600: hsl(30, 10%, 34%);
+  --color-Stone-900: hsl(24, 5%, 18%);
+  --color-Brown-800: hsl(14, 45%, 36%);
+  --color-Rose-800: hsl(332, 51%, 32%);
+  --color-Rose-50: hsl(330, 100%, 98%);
+}
+
+/* Typography */
+@font-face {
+  font-family: Outfit, sans-serif;
+  src: url(/assets/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: YoungSerif-Regular;
+  src: url(/assets/fonts/YoungSerif-Regular.ttf);
+}
+
+.text-preset-1 {
+  font-family: YoungSerif-Regular;
+  font-size: clamp(1.875rem, 2.353vw + 1.324rem, 2.5rem);
+  line-height: clamp(2.5rem, -1.176vw + 3.088rem, 2.813rem);
+}
+
+.text-preset-2 {
+  font-family: YoungSerif-Regular;
+  font-size: clamp(1.5rem, 0.941vw + 1.279rem, 1.75rem);
+  line-height: clamp(1.75rem, -0.188vw + 1.844rem, 1.8rem);
+}
+
+.text-preset-3 {
+  font-family: Outfit;
+  font-size: clamp(1.125rem, 0.471vw + 1.015rem, 1.25rem);
+  line-height: clamp(1.25rem, -0.376vw + 1.438rem, 1.35rem);
+  font-weight: 600;
+}
+
+.text-preset-4 {
+  font-family: Outfit;
+  font-size: clamp(0.875rem, 0.471vw + 0.765rem, 1rem);
+  line-height: clamp(1.488rem, 0.047vw + 1.476rem, 1.5rem);
+  font-weight: 400;
+}
+
+.text-preset-5 {
+  font-family: Outfit;
+  font-size: clamp(0.875rem, 0.471vw + 0.765rem, 1rem);
+  line-height: clamp(1.488rem, 0.047vw + 1.476rem, 1.5rem);
+  font-weight: 700;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-grey-900);
+  opacity: 0.6;
+  a {
+    color: var(--color-green);
+    font-weight: 700;
+  }
+}
