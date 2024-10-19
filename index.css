@@ -5,6 +5,27 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Variables */
 :root {
   --color-Stone-100: hsl(30, 54%, 90%);
@@ -18,7 +39,7 @@
 
 /* Typography */
 @font-face {
-  font-family: Outfit, sans-serif;
+  font-family: Outfit;
   src: url(/assets/fonts/Outfit-VariableFont_wght.ttf);
 }
 
@@ -29,50 +50,162 @@
 
 .text-preset-1 {
   font-family: YoungSerif-Regular;
-  font-size: clamp(1.875rem, 2.353vw + 1.324rem, 2.5rem);
-  line-height: clamp(2.5rem, -1.176vw + 3.088rem, 2.813rem);
+  font-size: clamp(2.313rem, 0.706vw + 2.147rem, 2.5rem);
+  line-height: clamp(2.5rem, -1.035vw + 3.018rem, 2.775rem);
+  color: var(--color-Stone-900);
 }
 
 .text-preset-2 {
   font-family: YoungSerif-Regular;
-  font-size: clamp(1.5rem, 0.941vw + 1.279rem, 1.75rem);
-  line-height: clamp(1.75rem, -0.188vw + 1.844rem, 1.8rem);
+  font-size: 1.75rem;
+  color: var(--color-Brown-800);
 }
 
 .text-preset-3 {
   font-family: Outfit;
-  font-size: clamp(1.125rem, 0.471vw + 1.015rem, 1.25rem);
-  line-height: clamp(1.25rem, -0.376vw + 1.438rem, 1.35rem);
+  font-size: 1.25rem;
   font-weight: 600;
+  color: var(--color-Rose-800);
 }
 
 .text-preset-4 {
   font-family: Outfit;
-  font-size: clamp(0.875rem, 0.471vw + 0.765rem, 1rem);
-  line-height: clamp(1.488rem, 0.047vw + 1.476rem, 1.5rem);
+  font-size: 1rem;
+  line-height: clamp(1.5rem, -0.706vw + 1.853rem, 1.688rem);
   font-weight: 400;
+  color: var(--color-Stone-600);
 }
 
-.text-preset-5 {
+.text-preset-4-bold {
   font-family: Outfit;
-  font-size: clamp(0.875rem, 0.471vw + 0.765rem, 1rem);
-  line-height: clamp(1.488rem, 0.047vw + 1.476rem, 1.5rem);
+  font-size: 1rem;
+  line-height: clamp(1.5rem, -0.706vw + 1.853rem, 1.688rem);
   font-weight: 700;
+  color: var(--color-Stone-600);
+}
+
+/* General */
+body {
+  background-color: var(--color-Stone-100);
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-Stone-150);
+}
+
+h1,
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  padding-left: 1rem;
+  &::marker {
+    color: var(--color-Brown-800);
+    font-weight: 800;
+    display: block;
+  }
+}
+
+/* Recipe */
+.recipe-container {
+  background-color: white;
+  margin: 0 auto;
+}
+
+.recipe__info {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recipe__prep-time {
+  background-color: var(--color-Rose-50);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Nutrition Table */
+.recipe__nutrition p {
+  margin-bottom: 1.5rem;
+}
+
+.recipe__nutrition table {
+  /* Below property must be set or the tr border won't show up! */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.recipe__nutrition tr {
+  display: block;
+  padding-inline-start: 2rem;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--color-Stone-150);
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border: 0;
+    padding-bottom: 0;
+  }
+}
+
+.recipe__nutrition td {
+  display: inline-block;
+  width: 49%;
+}
+
+.recipe__nutrition strong {
+  color: var(--color-Brown-800);
 }
 
 /* Attribution */
 .attribution {
+  font-family: Outfit;
   font-size: 11px;
-  position: absolute;
-  bottom: 0;
-  color: white;
   padding: 16px;
   width: 100%;
   text-align: center;
-  background-color: var(--color-grey-900);
-  opacity: 0.6;
+  color: var(--color-Stone-800);
   a {
-    color: var(--color-green);
     font-weight: 700;
+    color: var(--color-Brown-800);
+  }
+}
+
+/* Media Queries */
+@media screen and (min-width: 38.5rem) {
+  body {
+    padding-block: clamp(4rem, 42.105vw + -12.211rem, 8rem);
+    padding-inline: clamp(2.375rem, 25vw + -7.25rem, 4.75rem);
+  }
+
+  img {
+    border-radius: 0.75rem;
+  }
+
+  .recipe-container {
+    max-width: 46rem;
+    border-radius: 1.5rem;
+    padding: clamp(2rem, 5.263vw + -0.026rem, 2.5rem);
+  }
+
+  .recipe__info {
+    padding: 2.5rem 0 0;
   }
 }
