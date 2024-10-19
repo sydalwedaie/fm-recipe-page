@@ -6,7 +6,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution on [GitHub](https://sydalwedaie/fm-recipe-page.com)
+- Solution on [GitHub](https://github.com/sydalwedaie/fm-recipe-page)
 - Live Site URL: [Add live site URL here](https://fm-recipe-page-KiTsR.netlify.app)
 
 ## Built with
