@@ -14,9 +14,14 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- Fluid Typography
+- Fluid Spacing
 - Mobile-first workflow
 
 ### What I learned
 
+To be able to apply a border property to a table row `tr`, a `border-collapse: collapse` property must be added to the table. Otherwise the border won't show up.
+
 ### Useful resources
+
+I made extensive use of this [fluid typography calculator](https://fluidtypography.com/#usarusFluidTypographyGetStarted). But even more interestingly, I used it to calculate fluid paddings too! This way, my media query size jumps would not be as jarring.
